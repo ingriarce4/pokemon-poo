@@ -9,25 +9,20 @@
     <h1> Competencia Pokemon </h1>
     <img src="pokemon-hazte.jpg" border="0" width="680" height="400">
     <p>
-    <select name="grupo1">
-       <option value="1">Pikachu</option>
-       <option value="2">Charmander</option>
-       <option value="3">Dragonite</option>
-       <option value="10">Charizard</option>
-       <option value="11">Arcanine</option>
-       <option value="12">Gyarados</option>
-    </select>  vs
-    <select name="grupo2">
-       <option value="1">Pikachu</option>
-       <option value="2">Charmander</option>
-       <option value="3">Dragonite</option>
-       <option value="10">Charizard</option>
-       <option value="11">Arcanine</option>
-       <option value="12">Gyarados</option>
-    </select>
-    <button onclick="pelea()">¡Matar!</button>
-    <p id="resul"></p>
-  </center>
-  </body>
+      <div id="campo">
+    		<label for="pokemon1">Pokemon 1</label>
+    		<select name="pokemon1" id="pokemon1">
 
-</html>
+    		</select>
+
+    		<label for="pokemon2"> Pokemon 2</label>
+    		<select name="pokemon2" id="pokemon2">
+
+    		</select>
+
+    		<a href="#" onclick="pelear()">Pelear</a>
+    	</div>
+    	<p id="resultados"></p>
+    	<script src="assets/js/main.js"></script>
+    </body>
+    </html>
