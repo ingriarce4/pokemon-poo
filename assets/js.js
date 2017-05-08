@@ -1,3 +1,4 @@
+var pokemon = [];
 
   function Pokemon (nombre1, color1, poderDeAtaque1, vida1){
   this.nombre1 = nombre;
@@ -11,7 +12,7 @@
   };
 
   this.aumentarAmistad1 = function(valor){  // agrego otro método
-		this.nivelDeAmistad += valor;  // llamo a la propiedad y le agrego un valor
+		this.nivelDeAmistad1 += valor;  // llamo a la propiedad y le agrego un valor
 	};
   this.atacar = function(pokemon1){ //agrego otra acción que es la de atacar
 		pokemon1.vida1 -= this.poderDeAtaque1;
@@ -28,8 +29,8 @@
   	pokemon1.push(mew);
   	pokemon1.push(blastoise);
 
-  	llenarSelect("pokemon1.1", pokemon); //agrega al select
-  	llenarSelect("pokemon2.1", pokemon);
+  	llenarSelect("pokemon1.1", pokemon1); //agrega al selección.
+  	llenarSelect("pokemon2.1", pokemon1);
 
   }
 
@@ -48,10 +49,10 @@
   	var pok2 = document.getElementById("pokemon2.1").value;
   	var res = document.getElementById("resultados");
 
-  	var pokemon1 = pokemon.filter(function(el){ //utiliza filter porque selceciona uno
+  	var pokemon1 = pokemon1.filter(function(el){ //utiliza filter porque selceciona uno
   		return el.nombre1 == pok1; //retornamos en nombre y este es similar a la variable
   	})[0];
-  	var pokemon2 = pokemon.filter(function(el){
+  	var pokemon2 = pokemon1.filter(function(el){
   		return el.nombre1 == pok2;
   	})[0];
 
